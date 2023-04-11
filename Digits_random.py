@@ -4,7 +4,6 @@ Created on Mon Apr 10 14:23:28 2023
 
 @author: gbuch
 """
-
 import random
 
 # list of given numbers and the answer
@@ -17,9 +16,9 @@ list_opers2 = ['+', '-', '*']
 
 
 def pick_rand2(x):
-'''given an iterator x, pick 2 random numbers from it
-and return it as a list without those numbers
-'''
+    '''given an iterator x, pick 2 random numbers from it
+    and return it as a list without those numbers
+    '''
     x = list(x)
     i = random.randrange(len(x))
     x[i], x[-1] = x[-1], x[i]
@@ -31,7 +30,7 @@ and return it as a list without those numbers
 
 def combine(x):
     '''given an iterator, pick 2 random numbers from it, make a random operation on them to get a new number
-and finally return the list without the 2 old numbers, but with the new number
+    and finally return the list without the 2 old numbers, but with the new number
     '''
     n_1, n_2, x = pick_rand2(x)
     if n_2 != 0:
@@ -62,4 +61,5 @@ while not flag:
         print(list_exp)
         print(a)
         print('runs=', runs)
+
 
